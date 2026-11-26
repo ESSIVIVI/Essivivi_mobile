@@ -1,15 +1,12 @@
 import 'package:material_ui/material_ui.dart';
 
-class Connection extends StatefulWidget {
+import 'sign_in_screen.dart';
+
+/// Point d'entrée historique de l'authentification.
+/// Délègue désormais à l'écran de connexion complet.
+class Connection extends StatelessWidget {
   const Connection({super.key});
 
   @override
-  State<Connection> createState() => _ConnectionState();
-}
-
-class _ConnectionState extends State<Connection> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Connection page")));
-  }
+  Widget build(BuildContext context) => const SignInScreen();
 }
