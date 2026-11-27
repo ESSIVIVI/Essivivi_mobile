@@ -1,7 +1,8 @@
+import 'package:essivivi/views/livreur/livreur_nav.dart';
 import 'package:material_ui/material_ui.dart';
 
-import 'auth/auth_theme.dart';
-import 'auth/connection.dart';
+import 'views/auth/auth_theme.dart';
+import 'views/auth/connection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AuthColors.background,
         colorScheme: ColorScheme.fromSeed(seedColor: AuthColors.green),
       ),
-      home: const Connection(),
+      home: const LivreurNav(),
       debugShowCheckedModeBanner: false,
     );
   }
