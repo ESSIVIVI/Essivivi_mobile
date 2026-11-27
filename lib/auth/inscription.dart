@@ -7,14 +7,14 @@ import 'widgets/primary_auth_button.dart';
 import 'widgets/wave_header.dart';
 
 /// Écran d'inscription : en-tête vague + quatre champs soulignés.
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class Insciption extends StatefulWidget {
+  const Insciption({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<Insciption> createState() => _InsciptionState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _InsciptionState extends State<Insciption> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -44,7 +44,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            WaveHeader(height: size.height * 0.32, title: 'Sign Up'),
+            WaveHeader(
+              height: size.height * 0.30,
+              title: 'Sign Up',
+              profile: WaveProfile.signUp,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
