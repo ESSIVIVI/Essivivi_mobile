@@ -1,10 +1,10 @@
-import 'package:essivivi/livreur/onglets/acceuil.dart';
-import 'package:essivivi/livreur/onglets/client.dart';
-import 'package:essivivi/livreur/onglets/new_commande.dart';
-import 'package:essivivi/livreur/onglets/carte.dart';
-import 'package:essivivi/livreur/onglets/activit%C3%A9.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:essivivi/views/livreur/onglets/acceuil.dart';
+import 'package:essivivi/views/livreur/onglets/activite.dart';
+import 'package:essivivi/views/livreur/onglets/carte.dart';
+import 'package:essivivi/views/livreur/onglets/client.dart';
+import 'package:essivivi/views/livreur/onglets/new_commande.dart';
 import 'package:flutter/services.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:remixicon/remixicon.dart';
 
 class LivreurNav extends StatefulWidget {
@@ -33,12 +33,12 @@ class _LivreurNavState extends State<LivreurNav> {
   @override
   Widget build(BuildContext context) {
     List widgetList = [
-      Acceuil(),
-      Boisson(),
-      // index 2 reserved for the FAB (opens NewOperation)
+      const Acceuil(),
+      const Boisson(),
+      // index 2 réservé au FAB (ouvre NewCommande)
       const SizedBox.shrink(),
-      Historique(),
-      Profil(),
+      const Historique(),
+      const Activite(),
     ];
 
     final currentPage = widgetList.elementAt(selectedIndex);
@@ -54,17 +54,7 @@ class _LivreurNavState extends State<LivreurNav> {
         setState(() => selectedIndex = 0);
       },
       child: Scaffold(
-        body:
-            selectedIndex == 4 ||
-                selectedIndex == 2 ||
-                selectedIndex == 1 ||
-                selectedIndex == 0 ||
-                selectedIndex == 3
-            ? currentPage
-            : Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: currentPage,
-              ),
+        body: currentPage,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.push(
