@@ -1,4 +1,5 @@
-import 'package:essivivi/views/livreur/onglets/acceuil.dart';
+import 'package:essivivi/theme/app_colors.dart';
+import 'package:essivivi/views/livreur/onglets/accueil.dart';
 import 'package:essivivi/views/livreur/onglets/activite.dart';
 import 'package:essivivi/views/livreur/onglets/carte.dart';
 import 'package:essivivi/views/livreur/onglets/client.dart';
@@ -33,9 +34,9 @@ class _LivreurNavState extends State<LivreurNav> {
   @override
   Widget build(BuildContext context) {
     List widgetList = [
-      const Acceuil(),
+      const Accueil(),
       const Boisson(),
-      // index 2 réservé au FAB (ouvre NewCommande)
+      // index 2 réservé au FAB (ouvre Commande)
       const SizedBox.shrink(),
       const Historique(),
       const Activite(),
@@ -65,7 +66,7 @@ class _LivreurNavState extends State<LivreurNav> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(28),
           ),
-          backgroundColor: const Color(0xFF1c058c),
+          backgroundColor: AppColors.green,
           child: const Icon(
             RemixIcons.add_large_line,
             color: Colors.white,
@@ -75,16 +76,16 @@ class _LivreurNavState extends State<LivreurNav> {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          unselectedItemColor: Colors.blueGrey,
+          unselectedItemColor: AppColors.muted,
           currentIndex: selectedIndex,
           onTap: onIndexTap,
           showUnselectedLabels: true,
-          selectedItemColor: const Color(0xFF1c058c),
+          selectedItemColor: AppColors.green,
           elevation: 0,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(RemixIcons.home_2_line),
-              label: "Acceuil",
+              label: "Accueil",
             ),
             BottomNavigationBarItem(
               icon: Icon(RemixIcons.group_line),

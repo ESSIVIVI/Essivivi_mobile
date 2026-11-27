@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import 'auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 import 'inscription.dart';
 import 'widgets/bottom_auth_link.dart';
 import 'widgets/custom_underline_field.dart';
@@ -55,7 +55,7 @@ class _ConnectionState extends State<Connection> {
                   const Text(
                     'Welcome Back!',
                     style: TextStyle(
-                      color: AuthColors.green,
+                      color: AppColors.green,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -83,7 +83,7 @@ class _ConnectionState extends State<Connection> {
                         _obscurePassword
                             ? Icons.visibility_off_outlined
                             : Icons.visibility_outlined,
-                        color: AuthColors.muted,
+                        color: AppColors.muted,
                         size: 18,
                       ),
                       onPressed: () {
@@ -107,7 +107,7 @@ class _ConnectionState extends State<Connection> {
                                 setState(() => _rememberMe = value ?? false);
                               },
                               side: const BorderSide(
-                                color: AuthColors.muted,
+                                color: AppColors.muted,
                                 width: 1.2,
                               ),
                               shape: RoundedRectangleBorder(
@@ -116,7 +116,7 @@ class _ConnectionState extends State<Connection> {
                               fillColor:
                                   WidgetStateProperty.resolveWith<Color>((states) {
                                 if (states.contains(WidgetState.selected)) {
-                                  return AuthColors.green;
+                                  return AppColors.green;
                                 }
                                 return Colors.transparent;
                               }),
@@ -125,7 +125,7 @@ class _ConnectionState extends State<Connection> {
                           const SizedBox(width: 8),
                           const Text(
                             'Remember me',
-                            style: TextStyle(color: AuthColors.muted, fontSize: 12),
+                            style: TextStyle(color: AppColors.muted, fontSize: 12),
                           ),
                         ],
                       ),
@@ -136,7 +136,7 @@ class _ConnectionState extends State<Connection> {
                         child: const Text(
                           'Forgot Password?',
                           style: TextStyle(
-                            color: AuthColors.green,
+                            color: AppColors.green,
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                           ),

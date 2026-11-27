@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import 'auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 import 'widgets/bottom_auth_link.dart';
 import 'widgets/custom_underline_field.dart';
 import 'widgets/primary_auth_button.dart';
@@ -57,7 +57,7 @@ class _InsciptionState extends State<Insciption> {
                   const Text(
                     'Hey, Welcome!',
                     style: TextStyle(
-                      color: AuthColors.green,
+                      color: AppColors.green,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -92,7 +92,7 @@ class _InsciptionState extends State<Insciption> {
                         _obscurePassword
                             ? Icons.visibility_off_outlined
                             : Icons.visibility_outlined,
-                        color: AuthColors.muted,
+                        color: AppColors.muted,
                         size: 18,
                       ),
                       onPressed: () {
@@ -114,7 +114,7 @@ class _InsciptionState extends State<Insciption> {
                         _obscureConfirm
                             ? Icons.visibility_off_outlined
                             : Icons.visibility_outlined,
-                        color: AuthColors.muted,
+                        color: AppColors.muted,
                         size: 18,
                       ),
                       onPressed: () {

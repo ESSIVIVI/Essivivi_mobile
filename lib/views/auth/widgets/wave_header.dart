@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import '../auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 
 /// Profil de la vague : chaque écran peut avoir des crêtes plus ou moins hautes.
 enum WaveProfile { signIn, signUp }
@@ -100,7 +100,7 @@ class _LiquidWavePainter extends CustomPainter {
     canvas.drawShadow(path, Colors.black.withValues(alpha: 0.28), 10.0, true);
 
     final Paint paint = Paint()
-      ..color = AuthColors.green
+      ..color = AppColors.green
       ..style = PaintingStyle.fill;
     canvas.drawPath(path, paint);
   }

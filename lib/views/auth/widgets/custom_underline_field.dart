@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import '../auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 
 /// Champ de saisie minimaliste : bordure basse, icône à gauche, icône optionnelle à droite.
 class CustomUnderlineField extends StatelessWidget {
@@ -38,17 +38,17 @@ class CustomUnderlineField extends StatelessWidget {
       style: const TextStyle(fontSize: 14, color: Colors.black87),
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: AuthColors.hint, fontSize: 13),
-        prefixIcon: Icon(prefixIcon, color: AuthColors.green, size: 18),
+        hintStyle: const TextStyle(color: AppColors.hint, fontSize: 13),
+        prefixIcon: Icon(prefixIcon, color: AppColors.green, size: 18),
         prefixIconConstraints: const BoxConstraints(minWidth: 32, minHeight: 32),
         suffixIcon: suffixIcon,
         suffixIconConstraints: const BoxConstraints(minWidth: 32, minHeight: 32),
         contentPadding: const EdgeInsets.symmetric(vertical: 10),
         enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: AuthColors.border, width: 1.2),
+          borderSide: BorderSide(color: AppColors.border, width: 1.2),
         ),
         focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: AuthColors.green, width: 1.8),
+          borderSide: BorderSide(color: AppColors.green, width: 1.8),
         ),
       ),
     );

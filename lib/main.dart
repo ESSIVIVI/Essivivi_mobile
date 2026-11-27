@@ -1,4 +1,4 @@
-import 'package:essivivi/views/auth/auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 import 'package:essivivi/views/auth/connection.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Essivivi',
       theme: ThemeData(
-        scaffoldBackgroundColor: AuthColors.background,
-        colorScheme: ColorScheme.fromSeed(seedColor: AuthColors.green),
+        scaffoldBackgroundColor: AppColors.background,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.green),
       ),
       home: const Connection(),
       debugShowCheckedModeBanner: false,

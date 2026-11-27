@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import '../auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 
 /// Lien de bas d'écran : « Don't have an account? Signup ».
 class BottomAuthLink extends StatelessWidget {
@@ -22,18 +22,18 @@ class BottomAuthLink extends StatelessWidget {
       children: [
         Text(
           promptText,
-          style: const TextStyle(color: AuthColors.textMuted, fontSize: 12.5),
+          style: const TextStyle(color: AppColors.textMuted, fontSize: 12.5),
         ),
         GestureDetector(
           onTap: onTap,
           child: Text(
             actionText,
             style: const TextStyle(
-              color: AuthColors.green,
+              color: AppColors.green,
               fontSize: 12.5,
               fontWeight: FontWeight.bold,
               decoration: TextDecoration.underline,
-              decorationColor: AuthColors.green,
+              decorationColor: AppColors.green,
             ),
           ),
         ),

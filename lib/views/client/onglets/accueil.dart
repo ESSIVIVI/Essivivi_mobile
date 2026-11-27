@@ -1,13 +1,13 @@
 import 'package:material_ui/material_ui.dart';
 
-class Acceuil extends StatefulWidget {
-  const Acceuil({super.key});
+class Accueil extends StatefulWidget {
+  const Accueil({super.key});
 
   @override
-  State<Acceuil> createState() => _AcceuilState();
+  State<Accueil> createState() => _AccueilState();
 }
 
-class _AcceuilState extends State<Acceuil> {
+class _AccueilState extends State<Accueil> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Center(child: Text("Accueil")));

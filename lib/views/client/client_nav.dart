@@ -1,4 +1,5 @@
-import 'package:essivivi/views/client/onglets/acceuil.dart';
+import 'package:essivivi/theme/app_colors.dart';
+import 'package:essivivi/views/client/onglets/accueil.dart';
 import 'package:essivivi/views/client/onglets/boissons.dart';
 import 'package:essivivi/views/client/onglets/commande.dart';
 import 'package:essivivi/views/client/onglets/historique.dart';
@@ -33,12 +34,12 @@ class _ClientNavState extends State<ClientNav> {
   @override
   Widget build(BuildContext context) {
     List widgetList = [
-      Acceuil(),
-      Boissons(),
-      // index 2 reserved for the FAB (opens NewOperation)
+      const Accueil(),
+      const Boissons(),
+      // index 2 réservé au FAB (ouvre Commande)
       const SizedBox.shrink(),
-      Historique(),
-      Profil(),
+      const Historique(),
+      const Profil(),
     ];
 
     final currentPage = widgetList.elementAt(selectedIndex);
@@ -54,17 +55,7 @@ class _ClientNavState extends State<ClientNav> {
         setState(() => selectedIndex = 0);
       },
       child: Scaffold(
-        body:
-            selectedIndex == 4 ||
-                selectedIndex == 2 ||
-                selectedIndex == 1 ||
-                selectedIndex == 0 ||
-                selectedIndex == 3
-            ? currentPage
-            : Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: currentPage,
-              ),
+        body: currentPage,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.push(
@@ -75,7 +66,7 @@ class _ClientNavState extends State<ClientNav> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(28),
           ),
-          backgroundColor: const Color(0xFF1c058c),
+          backgroundColor: AppColors.green,
           child: const Icon(
             RemixIcons.add_large_line,
             color: Colors.white,
@@ -85,16 +76,16 @@ class _ClientNavState extends State<ClientNav> {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          unselectedItemColor: Colors.blueGrey,
+          unselectedItemColor: AppColors.muted,
           currentIndex: selectedIndex,
           onTap: onIndexTap,
           showUnselectedLabels: true,
-          selectedItemColor: const Color(0xFF1c058c),
+          selectedItemColor: AppColors.green,
           elevation: 0,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(RemixIcons.home_2_line),
-              label: "Acceuil",
+              label: "Accueil",
             ),
             BottomNavigationBarItem(
               icon: Icon(RemixIcons.shopping_cart_2_line),

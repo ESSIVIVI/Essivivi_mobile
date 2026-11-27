@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import '../auth_theme.dart';
+import 'package:essivivi/theme/app_colors.dart';
 
 /// Bouton d'action principal pleine largeur.
 class PrimaryAuthButton extends StatelessWidget {
@@ -23,9 +23,9 @@ class PrimaryAuthButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: isLoading ? null : onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AuthColors.green,
+          backgroundColor: AppColors.green,
           foregroundColor: Colors.white,
-          disabledBackgroundColor: AuthColors.green.withValues(alpha: 0.7),
+          disabledBackgroundColor: AppColors.green.withValues(alpha: 0.7),
           elevation: 2,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(6),
